@@ -12,9 +12,10 @@ export interface Config { }
 export const Config: Schema<Config> = Schema.object({})
 
 export function apply(ctx: Context) {
-  ctx.command('语音变速 <speed:number>', '对语音进行变速', {checkArgCount: true})
+  ctx.command('语音变速 <speed:number>', '对语音进行变速')
     .usage('支持调用指令后发语音和回复语音两种方法')
     .action(async ({ session }, speed) => {
+      if (!speed) return '未设置倍速，输入“help 语音变速”查看指令用法'
       if (speed <= 0) return '倍速必须大于0'
 
       let elements: h[] = []

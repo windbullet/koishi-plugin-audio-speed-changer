@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-audio-speed-changer",
   "description": "语音变速",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,13 +9,20 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "homepage": "https://github.com/windbullet/koishi-plugin-audio-speed-changer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windbullet/koishi-plugin-audio-speed-changer.git"
+  },
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "koishi-plugin-ffmpeg": "^1.1.0",
+    "koishi-plugin-silk": "^1.2.0"
+  },
   "peerDependencies": {
     "koishi": "^4.17.4"
   }
